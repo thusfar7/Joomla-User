@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fieldset name="default" label="COM_USERS_REGISTRATION_DEFAULT_LABEL">
+        <field
+                name="spacer"
+                type="spacer"
+                class="text"
+                label="COM_USERS_REGISTER_REQUIRED"
+        />
+        
+
+        <field
+                name="name"
+                type="text"
+                vmodel="message"
+                description="COM_USERS_REGISTER_NAME_DESC"
+                filter="string"
+                label="COM_USERS_REGISTER_NAME_LABEL"
+                required="true"
+                size="30"
+        />
+
+        <field
+                name="username"
+                type="text"
+                class="validate-username"
+                description="COM_USERS_DESIRED_USERNAME"
+                filter="username"
+                label="COM_USERS_REGISTER_USERNAME_LABEL"
+                message="COM_USERS_REGISTER_USERNAME_MESSAGE"
+                required="true"
+                size="30"
+                validate="username"
+        />
+
+        <field
+                name="email1"
+                type="email"
+                description="COM_USERS_REGISTER_EMAIL1_DESC"
+                field="id"
+                filter="string"
+                label="COM_USERS_REGISTER_EMAIL1_LABEL"
+                message="COM_USERS_REGISTER_EMAIL1_MESSAGE"
+                required="true"
+                size="30"
+                unique="true"
+                validate="email"
+        />
+
+        <field
+                name="email2"
+                type="email"
+                description="COM_USERS_REGISTER_EMAIL2_DESC"
+                field="email1"
+                filter="string"
+                label="COM_USERS_REGISTER_EMAIL2_LABEL"
+                message="COM_USERS_REGISTER_EMAIL2_MESSAGE"
+                required="true"
+                size="30"
+                validate="equals"
+        />
+
+        <field
+                name="password1"
+                type="password"
+                autocomplete="off"
+                class="validate-password"
+                description="COM_USERS_DESIRED_PASSWORD"
+                field="password1"
+                filter="raw"
+                label="COM_USERS_PROFILE_PASSWORD1_LABEL"
+                size="30"
+                validate="password"
+                required="true"
+        />
+
+        <field
+                name="password2"
+                type="password"
+                autocomplete="off"
+                class="validate-password"
+                description="COM_USERS_PROFILE_PASSWORD2_DESC"
+                field="password1"
+                filter="raw"
+                label="COM_USERS_PROFILE_PASSWORD2_LABEL"
+                message="COM_USERS_PROFILE_PASSWORD1_MESSAGE"
+                size="30"
+                validate="equals"
+                required="true"
+        />
+
+        <field name="address" type="text"
+               description="PLG_USER_PROFILE_FIELD_ADDRESS_DESC"
+               label="PLG_USER_PROFILE_FIELD_ADDRESS_LABEL"
+               required="true"
+               size="255"
+        />
+
+        <field name="city" type="text"
+               description="PLG_USER_PROFILE_FIELD_CITY_DESC"
+               label="PLG_USER_PROFILE_FIELD_CITY_LABEL"
+               required="true"
+               size="255"
+        />
+
+        <field name="state" type="list" required="true" default="" label="PLG_USER_PROFILE_FIELD_STATE_LABEL" description="PLG_USER_PROFILE_FIELD_STATE_DESC">
+            <option value=""></option>
+            <option value="1">Bjelovarsko-bilogorska</option>
+            <option value="2">Brodsko-posavska</option>
+            <option value="3">Dubrovačko-neretvanska</option>
+            <option value="4">Istarska</option>
+            <option value="5">Karlovačka</option>
+            <option value="6">Koprivničko-križevačka</option>
+            <option value="7">Krapinsko-zagorska</option>
+            <option value="8">Ličko-senjska</option>
+            <option value="9">Međimurska</option>
+            <option value="10">Osječko-baranjska</option>
+            <option value="11">Požeško-slavonska</option>
+            <option value="12">Primorsko-goranska</option>
+            <option value="13">Sisačko-moslavačka</option>
+            <option value="14">Splitsko-dalmatinska</option>
+            <option value="15">Šibensko-kninska</option>
+            <option value="16">Varaždinska</option>
+            <option value="17">Virovitičko-podravska</option>
+            <option value="18">Vukovarsko-srijemska</option>
+            <option value="19">Zadarska</option>
+            <option value="20">Grad Zagreb</option>
+            <option value="21">Zagrebačka</option>
+            <option value="22">Inozemstvo</option>
+        </field>
+
+        <field name="oib" type="number"
+               description="PLG_USER_PROFILE_FIELD_OIB_DESC"
+               label="PLG_USER_PROFILE_FIELD_OIB_LABEL"
+               required="true"
+               size="11"
+        />
+
+        <field name="contact1" type="text"
+               description="PLG_USER_PROFILE_FIELD_CONTACT1_DESC"
+               label="PLG_USER_PROFILE_FIELD_CONTACT1_LABEL"
+               required="true"
+               size="12"
+        />
+
+        <field name="contact2" type="text"
+               description="PLG_USER_PROFILE_FIELD_CONTACT2_DESC"
+               label="PLG_USER_PROFILE_FIELD_CONTACT2_LABEL"
+               required="false"
+               size="12"
+        />
+
+        <field
+                name="captcha"
+                type="captcha"
+                label="COM_USERS_CAPTCHA_LABEL"
+                description="COM_USERS_CAPTCHA_DESC"
+                validate="captcha"
+        />
+    </fieldset>
+</form>
